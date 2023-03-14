@@ -200,7 +200,7 @@
             </td>
             <td align="center" width="120px">
                 <center>
-                <span style="font-size:16px"><a href="https://weixionglin.github.io/">Ziheng Zhao</a><sup>1,</sup></span>
+                <span style="font-size:16px">Ziheng Zhao<sup>1,</sup></span>
                 </center>
             </td>
             <td align="center" width="160px">
@@ -220,7 +220,7 @@
     		</td>
             <td align="center" width="150px">	    
                 <center>
-                <span style="font-size:16px"><a href="https://mediabrain.sjtu.edu.cn/">Yanfeng Wang</a><sup>1,2,</sup></span>
+                <span style="font-size:16px"><a href="https://cmic.sjtu.edu.cn/wangyanfeng/">Yanfeng Wang</a><sup>1,2,</sup></span>
                 </center>
     		</td>
             <td align="center" width="120px">
@@ -252,130 +252,132 @@
     </table>
 	
 	<table align="center" width="700px">
-        <tbody><tr>
-            <td align="center" width="200px">
-            <center>
-                <br>
-                <span style="font-size:20px">Code
-                <a href="https://github.com/WeixiongLin/PMC-CLIP/">[GitHub]</a>
-                </span>
-            </center>
-            </td>
+    <tbody><tr>
+      <td align="center" width="200px">
+      <center>
+          <br>
+          <span style="font-size:20px">Code
+          <a href="https://github.com/WeixiongLin/PMC-CLIP/">[GitHub]</a>
+          </span>
+      </center>
+      </td>
 
-            <td align="center" width="200px">
-            <center>
-                <br>
-                <span style="font-size:20px">
-                Paper <a href="https://arxiv.org/abs/2303.07240"> [arXiv]</a>
-                </span>
-            </center>
-            </td>
+      <td align="center" width="200px">
+      <center>
+          <br>
+          <span style="font-size:20px">
+          Paper <a href="https://arxiv.org/abs/2303.07240"> [arXiv]</a>
+          </span>
+      </center>
+      </td>
 
-            <td align="center" width="200px">
-            <center>
-                <br>
-                <span style="font-size:20px">
-                Cite <a href="./cite.txt"> [BibTeX]</a>
-                </span>
-            </center>
-            </td>
-        </tr></tbody>
-    </table>
+      <td align="center" width="200px">
+      <center>
+          <br>
+          <span style="font-size:20px">
+          Cite <a href="./cite.txt"> [BibTeX]</a>
+          </span>
+      </center>
+      </td>
+    </tr></tbody>
+  </table>
 	
-    <br><hr>
-    <center><h2> Abstract </h2> </center>
-    <div>
-        <p style="text-align:justify; text-justify:inter-ideograph;"><left>
-            Foundation models trained on large-scale dataset gain a recent surge in CV and NLP. In contrast, development in biomedical domain lags far behind due to data scarcity. To address this issue, we build and release PMC-OA, a biomedical dataset with 1.6M image-caption pairs collected from PubMedCentral's OpenAccess subset, which is 8 times larger than before. PMC-OA covers diverse modalities or diseases, with majority of the image-caption samples aligned at finer-grained level, i.e., subfigure and subcaption. While pretraining a CLIP-style model on PMC-OA, our model named PMC-CLIP achieves state-of-the-art results on various downstream tasks, including image-text retrieval on ROCO, MedMNIST image classification, Medical VQA, i.e. +8.1% R@10 on image-text retrieval, +3.9% accuracy on image classification.
-        </left></p>
-    </div>
-
-    <br><hr>
-    <center> <h2> Dataset Statistics </h2> </center>
-    <div>
+  <br><hr>
+  <center><h2> Abstract </h2> </center>
+  <div>
       <p style="text-align:justify; text-justify:inter-ideograph;"><left>
-        Statistics over the pipeline and the collected PMC-OA.
+          Foundation models trained on large-scale dataset gain a recent surge in CV and NLP. In contrast, development in biomedical domain lags far behind due to data scarcity. To address this issue, we build and release PMC-OA, a biomedical dataset with 1.6M image-caption pairs collected from PubMedCentral's OpenAccess subset, which is 8 times larger than before. PMC-OA covers diverse modalities or diseases, with majority of the image-caption samples aligned at finer-grained level, i.e., subfigure and subcaption. While pretraining a CLIP-style model on PMC-OA, our model named PMC-CLIP achieves state-of-the-art results on various downstream tasks, including image-text retrieval on ROCO, MedMNIST image classification, Medical VQA, i.e. +8.1% R@10 on image-text retrieval, +3.9% accuracy on image classification.
       </left></p>
-      <p><img class="left"  src="./resources/data_stastics.png" width="800px"></p>
-    </div>
+  </div>
+
+  <br><hr>
+  <center> <h2> Dataset Statistics Over the Pipeline </h2> </center>
+  <div>
+    <p style="text-align:justify; text-justify:inter-ideograph;"><left>
+      Only 3.1% images of all are kept as biomedical figures.
+      For figures with multiple pannels, we link subfigures with subcaptions to generate aligned samples.
+      At last, 1.65M image-text pairs are left in PMC-OA
+    </left></p>
+    <p><img class="left"  src="./resources/data_stastics.png" width="800px"></p>
+  </div>
 
 
-    <br><hr>
-    <center> <h2> Dataset Overview </h2> </center>
-    <div>
+  <br><hr>
+  <center> <h2> Dataset Overview </h2> </center>
+  <div>
+    <p style="text-align:justify; text-justify:inter-ideograph;"><left>
+      <i>First</i>, PMC-OA covers a wide range of diagnostic procedures, spanning from common (CT, MRI) to rare ones (mitotic figure), which is more diverse than before (Fig. (a)).
+      <i>Second</i>, PMC-OA contains various diseases and findings, and is more up-to-date, covering new emergent diseases like COVID-19 (Fig. (b)).
+      <i>Third</i>, The sex-ratio across ages are shown in Fig. (c), as we can see PMC-OA is approximately gender-balanced, with 54% males.
+    </left></p>
+  </div>
+  <div>
+    <figure>
+      <img src="./resources/diagnostic.png" alt="diagnostic" style="height:100%">
+      <figcaption>(a) Diagnostic procedure</figcaption>
+    </figure>
+    <figure>
+      <img src="./resources/disease.png" alt="disease" style="height:100%">
+      <figcaption>(b) Disease and findings</figcaption>
+    </figure>
+    <figure>
+      <img src="./resources/ages.png" alt="disease" style="height:100%">
+      <figcaption>(c) Patients' age & gender</figcaption>
+    </figure>
+  </div>
+
+  <br><hr>
+  <center> <h2> Pipeline </h2> </center>
+  <div>
       <p style="text-align:justify; text-justify:inter-ideograph;"><left>
-        <i>First</i>, PMC-OA covers a wide range of diagnostic procedures, spanning from common (CT, MRI) to rare ones (mitotic figure), which is more diverse than before (Fig. (a)).
-        <i>Second</i>, PMC-OA contains various diseases and findings, and is more up-to-date, covering new emergent diseases like COVID-19 (Fig. (b)).
-        <i>Third</i>, The sex-ratio across ages are shown in Fig. (c), as we can see PMC-OA is approximately gender-balanced, with 54% males.
+      Overview of the pipeline. 
+      (a.) Collect image-caption dataset(PMC-OA) from biomedical documents.
+      (b.) Pretrain PMC-CLIP on PMC-OA.
       </left></p>
-    </div>
-    <div>
-      <figure>
-        <img src="./resources/diagnostic.png" alt="diagnostic" style="height:100%">
-        <figcaption>(a) Diagnostic procedure</figcaption>
-      </figure>
-      <figure>
-        <img src="./resources/disease.png" alt="disease" style="height:100%">
-        <figcaption>(b) Disease and findings</figcaption>
-      </figure>
-      <figure>
-        <img src="./resources/ages.png" alt="disease" style="height:100%">
-        <figcaption>(c) Patients' age & gender</figcaption>
-      </figure>
-    </div>
+      <p><img class="left"  src="./resources/pipeline.png" width="800px"></p>
+  </div>
 
-    <br><hr>
-    <center> <h2> Pipeline </h2> </center>
-    <div>
-        <p style="text-align:justify; text-justify:inter-ideograph;"><left>
-        Overview of the pipeline. 
-        (a.) Collect image-caption dataset(PMC-OA) from biomedical documents.
-        (b.) Pretrain PMC-CLIP on PMC-OA.
-        </left></p>
-        <p><img class="left"  src="./resources/pipeline.png" width="800px"></p>
-    </div>
-
-    <br><hr>
-    <center><h2>Results</h2></center>
-    <div>
-      <p style="text-align:justify; text-justify:inter-ideograph;"><left>
-          We evaluate PMC-CLIP on three downstream tasks, ...
+  <br><hr>
+  <center><h2>Results</h2></center>
+  <div>
+    <p style="text-align:justify; text-justify:inter-ideograph;"><left>
+        We evaluate PMC-CLIP on three downstream tasks: Image-text Retrieval, Medical Image Classification, Medical VQA.
+    </left></p>
+  </div>
+  <div>
+      <!-- =================== Retrieval  ======================== -->
+      <p><b>R1: Image-text Retrieval </b> </p>
+      <p><left>
+          <!-- this is retrieval -->
+          PMC-CLIP achieves a state-of-the-art result on image-text retrieval. On I2T Rank@10, PMC-CLIP outperforms previous state-of-the-art by 8.1%.
+          Since our dataset does not contain data from ROCO, the reported results resembles zero-shot evaluation.
+          Dark and light grey colors high-light the top and second best results on each metric.
       </left></p>
-    </div>
-    <div>
-        <!-- =================== Retrieval  ======================== -->
-        <p><b>R1: Image-text Retrieval </b> </p>
-        <p><left>
-            <!-- this is retrieval -->
-            We report a state-of-the-art result on image-text retrieval. On I2T Rank@10, PMC-CLIP outperforms previous state-of-the-art by 8.1%.
-            Since our dataset does not contain data from ROCO, the reported results resembles zero-shot evaluation.
-            Dark and light grey colors high-light the top and second best results on each metric.
-        </left></p>
-        <p><img class="center"  src="./resources/retrieval.png" width="800px"></p>
+      <p><img class="center"  src="./resources/retrieval.png" width="800px"></p>
 
-        <!-- =================== Image Classification  ======================== -->
-        <p><b>R2: Medical Image Classification </b> </p>
-        <p><left>
-          This is medical image classification.
-        </left></p>
-        <p><img class="center"  src="./resources/classification.png" width="800px"></p>
+      <!-- =================== Image Classification  ======================== -->
+      <p><b>R2: Medical Image Classification </b> </p>
+      <p><left>
+        PMC-CLIP achieves SOTA on MedMNIST. We only report three out of the twelve 2D-subset in MedMNIST here.
+      </left></p>
+      <p><img class="center"  src="./resources/classification.png" width="800px"></p>
 
-        <!-- =================== VQA  ======================== -->
-        <p><b>R3: MedVQA </b> </p>	
-        <p><left>
-          this is medvqa
-        </left></p>
-        <p><img class="center"  src="./resources/medvqa.png" width="800px"></p>
-    </div>
+      <!-- =================== VQA  ======================== -->
+      <p><b>R3: Medical VQA </b> </p>	
+      <p><left>
+        VQA requires model to learn finer grain visual and language representations. PMC-CLIP surpass SOTA method M3AE in 5 out of 6 results.
+      </left></p>
+      <p><img class="center"  src="./resources/medvqa.png" width="800px"></p>
+  </div>
 
-    <br>
-    <hr>
-    <center> <h2> Acknowledgements </h2> </center>
-    <div>
-        <p> 
-            Based on a template by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a>.
-        </p><br>
-    </div>
+  <br>
+  <hr>
+  <center> <h2> Acknowledgements </h2> </center>
+  <div>
+      <p> 
+          Based on a template by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a>.
+      </p><br>
+  </div>
 
 <br>
 </body>

@@ -1,1 +1,352 @@
-hello world
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!--
+  <script src="./resources/jsapi" type="text/javascript"></script>
+  <script type="text/javascript" async>google.load("jquery", "1.3.2");</script>
+ -->
+
+<style type="text/css">
+  @font-face {
+   font-family: 'Avenir Book';
+   src: url("./fonts/Avenir_Book.ttf"); /* File to be stored at your site */
+   }
+
+  body {
+    font-family: "Avenir Book", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:14px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+  }
+  div {
+    width: 800px;
+    margin: auto;
+  }
+  h1 {
+    font-weight:300;
+  }
+  h2 {
+    font-weight:300;
+  }
+
+  p {
+    font-weight:300;
+    line-height: 1.4;
+  }
+
+  code {
+    font-size: 0.8rem;
+    margin: 0 0.2rem;
+    padding: 0.5rem 0.8rem;
+    white-space: nowrap;
+    background: #efefef;
+    border: 1px solid #d3d3d3;
+    color: #000000;
+    border-radius: 3px;
+  }
+
+  pre > code {
+    display: block;
+    white-space: pre;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+  }
+
+  pre.prettyprint > code {
+    border: none;
+  }
+
+
+  .container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+  }
+  .image {
+        flex-basis: 40%
+  }
+  .text {
+        padding-left: 20px;
+        padding-right: 20px;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 0px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    width: 800px;
+  }
+</style>
+
+	<title>PMC-CLIP: Contrastive Language-Image Pre-training using Biomedical Documents</title>
+</head>
+
+<body>
+	<br>
+    <div>
+        <!-- <div align="center"> -->
+        <span style="font-size:32px; display:inline-block; text-align:center">PMC-CLIP: Contrastive Language-Image Pre-training <br>using Biomedical Documents</span><br><br><br>
+    </div>
+	<!-- <span style="font-size:36px" width="800px">PMC-CLIP: Contrastive Language-Image Pre-training using Biomedical Documents</span><br><br><br> -->
+	<table align="center">
+        <tbody><tr>
+            <td align="center" width="120px">
+                <center>
+                <span style="font-size:16px"><a href="https://weixionglin.github.io/">Weixiong Lin</a><sup>1,</sup></span>
+                </center>
+            </td>
+            <td align="center" width="120px">
+                <center>
+                <span style="font-size:16px"><a href="https://weixionglin.github.io/">Ziheng Zhao</a><sup>1,</sup></span>
+                </center>
+            </td>
+            <td align="center" width="160px">
+                <center>
+                <span style="font-size:16px"><a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang</a><sup>1,2,</sup></span>
+                </center>
+            </td>
+            <td align="center" width="130px">
+                <center>
+                <span style="font-size:16px"><a href="https://chaoyi-wu.github.io/">Chaoyi Wu</a><sup>1,2,</sup></span>
+                </center>
+            </td>
+            <td align="center" width="100px">
+                <center>
+                <span style="font-size:16px"><a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a><sup>1,2,</sup></span>
+                </center>
+    		</td>
+            <td align="center" width="150px">	    
+                <center>
+                <span style="font-size:16px"><a href="https://mediabrain.sjtu.edu.cn/">Yanfeng Wang</a><sup>1,2,</sup></span>
+                </center>
+    		</td>
+            <td align="center" width="120px">
+                <center>
+                <span style="font-size:16px"><a href="https://weidixie.github.io/">Weidi Xie</a><sup>1,2,</sup></span>
+                </center>
+            </td>
+        </tr></tbody>
+    </table><br>
+	
+	<table align="center" width="700px">
+        <tbody><tr>
+            <td align="center" width="50px">
+                <center>
+                    <span style="font-size:16px"></span>
+                </center>
+            </td>
+            <td align="center" width="300px">
+                <center>
+                    <span style="font-size:16px"><sup>1</sup>CMIC, Shanghai Jiao Tong University</span>
+                </center>
+            </td>
+            <td align="center" width="300px">
+                <center>
+                    <span style="font-size:16px"><sup>2</sup>Shanghai AI Lab</span>
+                </center>
+            </td>
+        </tr></tbody>
+    </table>
+	
+	<table align="center" width="700px">
+        <tbody><tr>
+            <td align="center" width="200px">
+            <center>
+                <br>
+                <span style="font-size:20px">Code
+                <a href="https://github.com/WeixiongLin/PMC-CLIP/">[GitHub]</a>
+                </span>
+            </center>
+            </td>
+
+            <td align="center" width="200px">
+            <center>
+                <br>
+                <span style="font-size:20px">
+                Paper <a href="https://arxiv.org/abs/2303.07240"> [arXiv]</a>
+                </span>
+            </center>
+            </td>
+
+            <td align="center" width="200px">
+            <center>
+                <br>
+                <span style="font-size:20px">
+                Cite <a href="./cite.txt"> [BibTeX]</a>
+                </span>
+            </center>
+            </td>
+        </tr></tbody>
+    </table>
+	
+    <br><hr>
+    <center><h2> Abstract </h2> </center>
+    <div>
+        <p style="text-align:justify; text-justify:inter-ideograph;"><left>
+            Foundation models trained on large-scale dataset gain a recent surge in CV and NLP. In contrast, development in biomedical domain lags far behind due to data scarcity. To address this issue, we build and release PMC-OA, a biomedical dataset with 1.6M image-caption pairs collected from PubMedCentral's OpenAccess subset, which is 8 times larger than before. PMC-OA covers diverse modalities or diseases, with majority of the image-caption samples aligned at finer-grained level, i.e., subfigure and subcaption. While pretraining a CLIP-style model on PMC-OA, our model named PMC-CLIP achieves state-of-the-art results on various downstream tasks, including image-text retrieval on ROCO, MedMNIST image classification, Medical VQA, i.e. +8.1% R@10 on image-text retrieval, +3.9% accuracy on image classification.
+        </left></p>
+    </div>
+
+    <br><hr>
+    <center> <h2> Pipeline </h2> </center>
+    <div>
+        <p style="text-align:justify; text-justify:inter-ideograph;"><left>
+        Overview of the pipeline. 
+        (a.) Collect image-caption dataset(PMC-OA) from biomedical documents.
+        (b.) Pretrain PMC-CLIP on PMC-OA.
+        </left></p>
+        <p><img class="left"  src="./resources/pipeline.png" width="800px"></p>
+    </div>
+
+    <br><hr>
+    <center> <h2> Dataset Overview </h2> </center>
+    <div>
+        <p style="text-align:justify; text-justify:inter-ideograph;"><left>
+        Overview dataset from the respectives of diagnostic, disease and fairness.
+        </left></p>
+        <p><img class="left"  src="./resources/dataset_overview.png" width="800px"></p>
+    </div>
+
+    <br><hr>
+    <center><h2>Results</h2></center>
+    <div>
+        <!-- =================== Retrieval  ======================== -->
+        <p><b>R1: Image-text Retrieval </b> </p>
+        <p><left>
+            <!-- this is retrieval -->
+            we report a state-of-the-art result on image-text retrieval. On I2T Rank@10, PMC-CLIP outperforms previous state-of-the-art by 8.1%.
+            Since our dataset does not contain data from ROCO, the reported results resembles zero-shot evaluation.
+            Dark and light grey colors high-light the top and second best results on each metric.
+        </left></p>
+        <p><img class="center"  src="./resources/padchest.png" width="800px"></p>
+
+        <!-- =================== Image Classification  ======================== -->
+        <p><b>R2: Medical Image Classification </b> </p>	
+        <p><left>
+            Comparison of proposed KAD with SOTA self-supervised baseline models and medical image-text pre-training models on ChestXray14 with different ratio of labeled data used.
+            AUC, F1 score are reported, and the metrics refer to the macro average on all the diseases. Note that for fairness, all baselines use the same backbone as the basic image encoder (that is, ResNet50). 
+            The percentages refer to the percentage of labels used in the training data.
+        </left></p>
+        <p><img class="center"  src="./resources/medmnist.png" width="800px"></p>
+        <div class="container">
+        <div class="image" width="550px">
+            <center><p><img class="center"  src="./resources/radar.png" width="500px"></p></center>
+        </div>
+        <div class="text" width="250px"> 
+            <p> The radar figure of our method and other methods of 14 diseases on Chestx-ray14 datasets 
+            AUC scores are reported and, as shown, our method exceeds the previous state-of-the-art on most diseases.
+            </p>
+        </div>
+        </div>    
+
+        <!-- =================== Image Classification  ======================== -->
+        <p><b>R3: MedVQA </b> </p>	
+        <p><left>
+        Comparisons of proposed KAD with SOTA medical image-text pre-training models and three board-certified radiologists on five competition pathologies in CheXpert dataset.
+        The AUC, F1 scores and MCC of five pathologies are shown in the plots, where the average and 95% CI are shown. 
+        </left></p>
+        <p><img class="center"  src="./resources/chexpert.png" width="800px"></p>
+    </div>
+
+    <br>
+    <hr>
+    <center> <h2> Acknowledgements </h2> </center>
+    <div>
+        <p> 
+            Based on a template by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a>.
+        </p><br>
+    </div>
+
+<br>
+</body>
+</html>

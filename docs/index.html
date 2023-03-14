@@ -25,6 +25,19 @@
     width: 800px;
     margin: auto;
   }
+
+  figure {
+    padding-right: 20px;
+    padding-bottom: 40px;
+    margin: auto;
+    height: 160px;
+    float: left;
+  }
+  figcaption {
+    padding: 2px;
+    text-align: center;
+  }
+
   h1 {
     font-weight:300;
   }
@@ -278,6 +291,40 @@
     </div>
 
     <br><hr>
+    <center> <h2> Dataset Statistics </h2> </center>
+    <div>
+      <p style="text-align:justify; text-justify:inter-ideograph;"><left>
+        Statistics over the pipeline and the collected PMC-OA.
+      </left></p>
+      <p><img class="left"  src="./resources/data_stastics.png" width="800px"></p>
+    </div>
+
+
+    <br><hr>
+    <center> <h2> Dataset Overview </h2> </center>
+    <div>
+      <p style="text-align:justify; text-justify:inter-ideograph;"><left>
+        <i>First</i>, PMC-OA covers a wide range of diagnostic procedures, spanning from common (CT, MRI) to rare ones (mitotic figure), which is more diverse than before (Fig. (a)).
+        <i>Second</i>, PMC-OA contains various diseases and findings, and is more up-to-date, covering new emergent diseases like COVID-19 (Fig. (b)).
+        <i>Third</i>, The sex-ratio across ages are shown in Fig. (c), as we can see PMC-OA is approximately gender-balanced, with 54% males.
+      </left></p>
+    </div>
+    <div>
+      <figure>
+        <img src="./resources/diagnostic.png" alt="diagnostic" style="height:100%">
+        <figcaption>(a) Diagnostic procedure</figcaption>
+      </figure>
+      <figure>
+        <img src="./resources/disease.png" alt="disease" style="height:100%">
+        <figcaption>(b) Disease and findings</figcaption>
+      </figure>
+      <figure>
+        <img src="./resources/ages.png" alt="disease" style="height:100%">
+        <figcaption>(c) Patients' age & gender</figcaption>
+      </figure>
+    </div>
+
+    <br><hr>
     <center> <h2> Pipeline </h2> </center>
     <div>
         <p style="text-align:justify; text-justify:inter-ideograph;"><left>
@@ -289,53 +336,36 @@
     </div>
 
     <br><hr>
-    <center> <h2> Dataset Overview </h2> </center>
-    <div>
-        <p style="text-align:justify; text-justify:inter-ideograph;"><left>
-        Overview dataset from the respectives of diagnostic, disease and fairness.
-        </left></p>
-        <p><img class="left"  src="./resources/dataset_overview.png" width="800px"></p>
-    </div>
-
-    <br><hr>
     <center><h2>Results</h2></center>
+    <div>
+      <p style="text-align:justify; text-justify:inter-ideograph;"><left>
+          We evaluate PMC-CLIP on three downstream tasks, ...
+      </left></p>
+    </div>
     <div>
         <!-- =================== Retrieval  ======================== -->
         <p><b>R1: Image-text Retrieval </b> </p>
         <p><left>
             <!-- this is retrieval -->
-            we report a state-of-the-art result on image-text retrieval. On I2T Rank@10, PMC-CLIP outperforms previous state-of-the-art by 8.1%.
+            We report a state-of-the-art result on image-text retrieval. On I2T Rank@10, PMC-CLIP outperforms previous state-of-the-art by 8.1%.
             Since our dataset does not contain data from ROCO, the reported results resembles zero-shot evaluation.
             Dark and light grey colors high-light the top and second best results on each metric.
         </left></p>
-        <p><img class="center"  src="./resources/padchest.png" width="800px"></p>
+        <p><img class="center"  src="./resources/retrieval.png" width="800px"></p>
 
         <!-- =================== Image Classification  ======================== -->
-        <p><b>R2: Medical Image Classification </b> </p>	
+        <p><b>R2: Medical Image Classification </b> </p>
         <p><left>
-            Comparison of proposed KAD with SOTA self-supervised baseline models and medical image-text pre-training models on ChestXray14 with different ratio of labeled data used.
-            AUC, F1 score are reported, and the metrics refer to the macro average on all the diseases. Note that for fairness, all baselines use the same backbone as the basic image encoder (that is, ResNet50). 
-            The percentages refer to the percentage of labels used in the training data.
+          This is medical image classification.
         </left></p>
-        <p><img class="center"  src="./resources/medmnist.png" width="800px"></p>
-        <div class="container">
-        <div class="image" width="550px">
-            <center><p><img class="center"  src="./resources/radar.png" width="500px"></p></center>
-        </div>
-        <div class="text" width="250px"> 
-            <p> The radar figure of our method and other methods of 14 diseases on Chestx-ray14 datasets 
-            AUC scores are reported and, as shown, our method exceeds the previous state-of-the-art on most diseases.
-            </p>
-        </div>
-        </div>    
+        <p><img class="center"  src="./resources/classification.png" width="800px"></p>
 
-        <!-- =================== Image Classification  ======================== -->
+        <!-- =================== VQA  ======================== -->
         <p><b>R3: MedVQA </b> </p>	
         <p><left>
-        Comparisons of proposed KAD with SOTA medical image-text pre-training models and three board-certified radiologists on five competition pathologies in CheXpert dataset.
-        The AUC, F1 scores and MCC of five pathologies are shown in the plots, where the average and 95% CI are shown. 
+          this is medvqa
         </left></p>
-        <p><img class="center"  src="./resources/chexpert.png" width="800px"></p>
+        <p><img class="center"  src="./resources/medvqa.png" width="800px"></p>
     </div>
 
     <br>

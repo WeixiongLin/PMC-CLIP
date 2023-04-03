@@ -50,9 +50,8 @@ python setup.py develop  # install pmc_clip with dev mode
 
 ### 2. Prepare Dataset
 
-[ROCO](https://github.com/razorx89/roco-dataset)
-
-[Pipeline of PMC-OA Development](https://github.com/WeixiongLin/Build-PMC-OA)
+Download from [Huggingface](https://huggingface.co/datasets/axiong/pmc-oa), [Baidu Cloud](https://pan.baidu.com/s/1mD51oOYbIOqDJSeiPNaCCg)(key: 3iqf).
+Or follow the [Pipeline of PMC-OA Development](https://github.com/WeixiongLin/Build-PMC-OA) if you want to start from scratch.
 
 
 ### 3. Training

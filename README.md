@@ -75,7 +75,7 @@ CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --rdzv_endpoint=$HOSTE_NODE
 --train-data="path/to/train.csv" --val-data="path/to/valid.csv" \
 --csv-img-key image --csv-caption-key caption \
 --warmup 500 --batch-size=128 --lr=1e-4 --wd=0.1 --epochs=100 --workers=8 \
---model RN50_PubmedBERT --hugging-face --mlm --crop-scale 0.5
+--model RN50_fusion4 --hugging-face --mlm --crop-scale 0.5
 ```
 
 <div class="third">

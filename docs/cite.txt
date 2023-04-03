@@ -1,0 +1,6 @@
+@article{lin2023pmc,
+  title={PMC-CLIP: Contrastive Language-Image Pre-training using Biomedical Documents},
+  author={Lin, Weixiong and Zhao, Ziheng and Zhang, Xiaoman and Wu, Chaoyi and Zhang, Ya and Wang, Yanfeng and Xie, Weidi},
+  journal={arXiv preprint arXiv:2303.07240},
+  year={2023}
+}

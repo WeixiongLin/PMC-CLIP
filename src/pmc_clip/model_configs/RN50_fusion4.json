@@ -1,0 +1,24 @@
+{
+    "embed_dim": 768,
+    "clip_model": "PMC_CLIP",
+    "vision_cfg": {
+        "image_size": 224,
+        "layers": [
+            3,
+            4,
+            6,
+            3
+        ],
+        "width": 64,
+        "patch_size": null
+    },
+    "text_cfg": {
+        "context_length": 77,
+        "vocab_size": 30522,
+        "width": 768,
+        "heads": 8,
+        "layers": 12,
+        "fusion_layers": 4,
+        "bert_model_name": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext"
+    }
+}

@@ -14,7 +14,7 @@ from pmc_clip.timm_model import TimmModel
 from pmc_clip.utils import freeze_batch_norm_2d, to_2tuple
 from ..tokenizer import tokenize, simple_tokenizer
 
-from .blocks import ModifiedResNet, LayerNorm, QuickGELU, VisualTransformer, Transformer
+from .blocks import ModifiedResNet, LayerNorm, QuickGELU, Transformer
 from .config import CLIPTextCfg, CLIPVisionCfg
 
 class CLIP(nn.Module):

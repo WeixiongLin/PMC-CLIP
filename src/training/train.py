@@ -151,3 +151,5 @@ def train_one_epoch_mlm(model, data, epoch, optimizer, scaler, scheduler, args, 
     # end for
 
 
+def train_one_epoch(*args, **kwargs):
+    raise NotImplementedError('train_one_epoch not implemented')

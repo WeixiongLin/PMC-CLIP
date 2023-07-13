@@ -21,7 +21,7 @@ from transformers import AutoTokenizer, AutoModel
 
 from .config import CLIPVisionCfg, CLIPTextCfg
 from .blocks import Bottleneck, AttentionPool2d, ResNet, ModifiedResNet, LayerNorm, QuickGELU, ResidualAttentionBlock,\
-                    Transformer, VisualTransformer
+                    Transformer
 
 
 class PMC_CLIP(nn.Module):

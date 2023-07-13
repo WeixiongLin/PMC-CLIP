@@ -3,7 +3,7 @@ import random
 import pandas as pd
 import torch
 import re
-
+import jsonlines
 
 def csv_loader(input_filename, img_key, caption_key, sep):
     r"""

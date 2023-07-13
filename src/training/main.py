@@ -26,7 +26,7 @@ try:
 except ImportError:
     hvd = None
 
-from pmc_clip import create_model_and_transforms, trace_model
+from pmc_clip import create_model_and_transforms, trace_model, get_pretrained_url, download_pretrained
 from training.data import get_data
 from training.distributed import is_master, init_distributed_device, world_info_from_env
 from training.logger import setup_logging
@@ -224,7 +224,24 @@ def main():
                     model.load_state_dict(checkpoint['state_dict'])
                 logging.info(f"=> loaded checkpoint '{args.resume}' (epoch {start_epoch})")
         else:
-            logging.info("=> no checkpoint found at '{}'".format(args.resume))
+            logging.info("=> no checkpoint found at local machine'{}'".format(args.resume))
+            logging.info("=> trying to fetch checkpoint from remote server'{}'".format(args.resume))
+            pretrained_model_name, tag = args.resume.split(':')
+            pretrained_model_url = get_pretrained_url(pretrained_model_name, tag)
+            cache_dir = os.path.expanduser("./.cache/clip")
+            logging.info("=> fetch {} to {}".format(pretrained_model_url, cache_dir))
+            download_target = download_pretrained(pretrained_model_url, cache_dir)
+
+            checkpoint = torch.load(download_target, map_location=device)
+            if len(checkpoint) == 1:
+                model.load_state_dict(checkpoint)
+            else:
+                sd = checkpoint["state_dict"]
+                if not args.distributed and next(iter(sd.items()))[0].startswith('module'):
+                    sd = {k[len('module.'):]: v for k, v in sd.items()}
+                model.load_state_dict(sd)
+                # model.load_state_dict(checkpoint['state_dict'])
+            logging.info(f"=> loaded checkpoint '{download_target}' (epoch {start_epoch})")
 
     # initialize datasets
     data = get_data(args, (preprocess_train, preprocess_val), epoch=start_epoch)

@@ -99,6 +99,26 @@ python -m training.main \
 --test-2000
 ```
 
+Also we provide automatic ways to load model weights from huggingface repo.
+
+| Model | URL |
+| --- | --- |
+| PMC_CLIP:beta | https://huggingface.co/datasets/axiong/pmc_oa_beta/blob/main/checkpoint.pt |
+
+
+Take PMC_CLIP:beta checkpoint as an example:
+```bash
+python -m training.main \
+--dataset-type "csv" --csv-separator "," --report-to tensorboard \
+--val-data="path/to/test.csv" \
+--csv-img-key image --csv-caption-key caption \
+--batch-size=32 --workers=8 \
+--model RN50_fusion4 --hugging-face --mlm --crop-scale 0.1 \
+--resume "PMC_CLIP:beta" \
+--test-2000
+```
+
+
 ## Acknowledgement
 The code is based on [OpenCLIP](https://github.com/mlfoundations/open_clip) and [M3AE](https://github.com/zhjohnchan/M3AE). We thank the authors for their open-sourced code and encourage users to cite their works when applicable.
 

@@ -142,3 +142,14 @@ Please raise an issue if you need help, any contributions are welcomed.
   year={2023}
 }
 ```
+
+The paper has been accepted by MICCAI 2023.
+```bash
+@inproceedings{lin2023pmc,
+  title={Pmc-clip: Contrastive language-image pre-training using biomedical documents},
+  author={Lin, Weixiong and Zhao, Ziheng and Zhang, Xiaoman and Wu, Chaoyi and Zhang, Ya and Wang, Yanfeng and Xie, Weidi},
+  booktitle={MICCAI},
+  year={2023}
+}
+```
+

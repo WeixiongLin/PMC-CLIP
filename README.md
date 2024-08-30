@@ -1,10 +1,16 @@
 # PMC-CLIP
 
+[![Quick Start Demo](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1P7uyzK_Mhu1YyMeRrrRY_e3NpkNBOI4L?usp=sharing) 
+[![Dataset and Model](https://img.shields.io/badge/Hugging%20Face-Dataset-green)](https://huggingface.co/datasets/axiong/pmc_oa)
+
 The dataset and checkpoint is available at [Huggingface](https://huggingface.co/datasets/axiong/pmc-oa), [Baidu Cloud](https://pan.baidu.com/s/1mD51oOYbIOqDJSeiPNaCCg)(key: 3iqf).
+
+📢 We provide the extracted image encoder and text encoder checkpoint in [Huggingface](https://huggingface.co/datasets/axiong/pmc-oa), and a quick start demo on how to use them in encoding image and text input. Check this [notebook](https://colab.research.google.com/drive/1P7uyzK_Mhu1YyMeRrrRY_e3NpkNBOI4L?usp=sharing)!
 
 
 - [PMC-CLIP](#pmc-clip)
-  - [Usage](#usage)
+  - [Quick Start Inference](#quick-start-inference)
+  - [Train and Evaluation](#train-and-evaluation)
     - [1. Create Environment](#1-create-environment)
     - [2. Prepare Dataset](#2-prepare-dataset)
     - [3. Training](#3-training)
@@ -14,7 +20,12 @@ The dataset and checkpoint is available at [Huggingface](https://huggingface.co/
   - [TODO](#todo)
   - [Cite](#cite)
 
-## Usage
+## Quick Start Inference
+
+We offer a quick start demo on how to use the image and text encoder of PMC-CLIP. Check this [notebook](https://colab.research.google.com/drive/1P7uyzK_Mhu1YyMeRrrRY_e3NpkNBOI4L?usp=sharing)!
+
+
+## Train and Evaluation
 
 Repo Structure
 ```bash
